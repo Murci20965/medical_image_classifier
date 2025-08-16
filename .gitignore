@@ -1,0 +1,41 @@
+# --- System & IDE Files ---
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE settings
+.vscode/
+.idea/
+
+# --- Python ---
+# Ignore virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Ignore Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# --- Project-Specific ---
+# Ignore local data folders (large files, not for version control)
+data/
+
+# Ignore logs and plots (generated during runtime)
+logs/
+plots/
+
+# Ignore sensitive environment variables
+.env
+
+# Ignore other generated files
+rules.
+
+notebooks/
