@@ -104,7 +104,7 @@ Follow these steps to set up the project on your local machine.
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/Murci20965/medical_image_classifier.git](https://github.com/Murci20965/medical_image_classifier.git)
+   git clone https://github.com/Murci20965/medical_image_classifier.git
    cd medical_image_classifier
    ```
 
