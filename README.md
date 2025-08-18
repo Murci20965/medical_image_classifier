@@ -118,7 +118,7 @@ medical_image_classifier/
 ├── pytest.ini          # Pytest configuration
 ├── requirements.txt    # Project dependencies
 └── README.md           # Project documentation
-
+```
 ---
 
 ## Setup and Installation
