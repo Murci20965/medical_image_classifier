@@ -82,6 +82,7 @@ The project follows a modular structure to ensure a clean separation of concerns
 medical_image_classifier/
 │
 ├── app/              # FastAPI backend source code
+├── assets/           # Example images for the Gradio UI
 ├── data/             # (Local) Dataset storage (ignored by Git) (create folder manually, download data from kaggle using the link, unzip inside data/raw/)
 ├── logs/             # Stores application log files (auto generated during train and evaluation)
 ├── models/           # Trained and versioned model files (folder auto generated during training if not exist)
