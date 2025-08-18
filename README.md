@@ -150,7 +150,7 @@ This will print a classification report to the console and save a confusion matr
 
 ### 3. Running the Application (Local)
 
-To run the application locally, you will need two separate terminals.
+To run the application locally, you will need two separate terminals. Make sure the virtual environmwnt is activated.
 
 1. **Terminal 1: Start the API Server**
 
