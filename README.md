@@ -81,19 +81,20 @@ The project follows a modular structure to ensure a clean separation of concerns
 ```
 medical_image_classifier/
 │
-├── app/            # FastAPI backend source code
-├── data/           # (Local) Dataset storage (ignored by Git) (create folder manually, download data from kaggle using the link, unzip inside data/raw/)
-├── logs/           # Stores application log files (auto generated during train and evaluation)
-├── models/         # Trained and versioned model files (folder auto generated during training if not exist)
-├── src/            # Core source code (data loading, model, training, etc.)
-├── tests/          # Pytest unit tests
-├── ui/             # Gradio user interface source code
-├── .dockerignore   # Specifies files to ignore in the Docker build
-├── .gitignore      # Specifies files to ignore for Git
-├── Dockerfile      # Recipe for building the application container
-├── pytest.ini      # Pytest configuration
-├── requirements.txt# Project dependencies
-└── README.md       # Project documentation
+├── app/              # FastAPI backend source code
+├── assets/           # Example images for the Gradio UI
+├── data/             # (Local) Dataset storage (ignored by Git) (create folder manually, download data from kaggle using the link, unzip inside data/raw/)
+├── logs/             # Stores application log files (auto generated during train and evaluation)
+├── models/           # Trained and versioned model files (folder auto generated during training if not exist)
+├── src/              # Core source code (data loading, model, training, etc.)
+├── tests/            # Pytest unit tests
+├── ui/               # Gradio user interface source code
+├── .dockerignore     # Specifies files to ignore in the Docker build
+├── .gitignore        # Specifies files to ignore for Git
+├── Dockerfile        # Recipe for building the application container
+├── pytest.ini        # Pytest configuration
+├── requirements.txt  # Project dependencies
+└── README.md         # Project documentation
 ```
 ---
 
@@ -104,7 +105,7 @@ Follow these steps to set up the project on your local machine.
 1. **Clone the repository:**
 
    ```bash
-   git clone [https://github.com/Murci20965/medical_image_classifier.git](https://github.com/Murci20965/medical_image_classifier.git)
+   git clone https://github.com/Murci20965/medical_image_classifier.git
    cd medical_image_classifier
    ```
 
@@ -150,7 +151,7 @@ This will print a classification report to the console and save a confusion matr
 
 ### 3. Running the Application (Local)
 
-To run the application locally, you will need two separate terminals.
+To run the application locally, you will need two separate terminals. Make sure the virtual environmwnt is activated.
 
 1. **Terminal 1: Start the API Server**
 
