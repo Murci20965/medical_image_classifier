@@ -77,25 +77,48 @@ The model was trained for 10 epochs, achieving a final validation accuracy of **
 ---
 
 ## Project Architecture
-The project follows a modular structure to ensure a clean separation of concerns:
+The project follows a modular structure to ensure a clean separation of concerns, with each file having a specific responsibility:
 ```
 medical_image_classifier/
 │
-├── app/              # FastAPI backend source code
-├── assets/           # Example images for the Gradio UI
-├── data/             # (Local) Dataset storage (ignored by Git) (create folder manually, download data from kaggle using the link, unzip inside data/raw/)
-├── logs/             # Stores application log files (auto generated during train and evaluation)
-├── models/           # Trained and versioned model files (folder auto generated during training if not exist)
-├── src/              # Core source code (data loading, model, training, etc.)
-├── tests/            # Pytest unit tests
-├── ui/               # Gradio user interface source code
-├── .dockerignore     # Specifies files to ignore in the Docker build
-├── .gitignore        # Specifies files to ignore for Git
-├── Dockerfile        # Recipe for building the application container
-├── pytest.ini        # Pytest configuration
-├── requirements.txt  # Project dependencies
-└── README.md         # Project documentation
-```
+├── app/
+│   ├── __init__.py
+│   ├── main.py         # FastAPI routes and server logic
+│   └── predict.py      # Core model inference service
+│
+├── assets/
+│   ├── normal_example.jpeg
+│   └── pneumonia_example.jpeg
+│
+├── data/             # (Local) Dataset storage (ignored by Git)
+│
+├── logs/             # Stores application log files (auto-generated)
+│
+├── models/           # Trained model files (auto-generated)
+│   └── pneumonia_classifier_v1_....h5
+│
+├── src/
+│   ├── __init__.py
+│   ├── config.py       # All project constants and paths
+│   ├── data_loader.py  # Data loading and preprocessing pipeline
+│   ├── evaluate.py     # Model evaluation script
+│   ├── logger.py       # Logging configuration
+│   ├── model.py        # CNN architecture definition
+│   └── train.py        # Model training script
+│
+├── tests/
+│   └── test_predict.py # Unit tests for the prediction service
+│
+├── ui/
+│   └── interface.py    # Gradio user interface
+│
+├── .dockerignore       # Specifies files to ignore in the Docker build
+├── .gitignore          # Specifies files to ignore for Git
+├── Dockerfile          # Recipe for building the application container
+├── pytest.ini          # Pytest configuration
+├── requirements.txt    # Project dependencies
+└── README.md           # Project documentation
+
 ---
 
 ## Setup and Installation
